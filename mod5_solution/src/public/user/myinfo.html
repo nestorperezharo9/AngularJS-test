@@ -1,0 +1,14 @@
+<div>
+    <div ng-if="myinfoCtrl.completed">  
+        <label for="userName">UserName: </label><input style="color: black" name="userName" ng-model="myinfoCtrl.userName" readonly> <br><br>
+        <label for="userName">LastName: </label><input style="color: black" name="lastName" ng-model="myinfoCtrl.lastName" readonly> <br><br>
+        <label for="userName">Email: </label><input style="color: black" name="email" ng-model="myinfoCtrl.email" readonly> <br><br>
+        <label for="userName">Phone: </label><input style="color: black" name="phone" ng-model="myinfoCtrl.phone" readonly> <br><br>
+        <label for="userName">FavDish: </label><input style="color: black" name="favDish" ng-model="myinfoCtrl.favDish"readonly>
+        
+    </div>
+
+    <div ng-if="!myinfoCtrl.completed">
+        Not Signed Up Yet. Sign up Now!
+    </div>
+</div>

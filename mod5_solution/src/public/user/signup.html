@@ -1,0 +1,29 @@
+<div>
+    <form name ="formSignUp" class="form">
+        <fieldset>
+            <legend>Sign-up</legend>
+                <center>
+                <p>First Name: <br><input type="text" placeholder="First name" name="name" id="firstName" id="firstName" ng-model="signupCtrl.user.firstName" required></p>
+                <span class="errorsito" ng-if="formSignUp.name.$error.required && formSignUp.name.$touched">First Name required!!</span><br>
+                <p>Last Name: <br><input type="text" placeholder="Last name" name="lastname" id="lastName" ng-model="signupCtrl.user.lastName" required></p>
+                <span class="errorsito" ng-if="formSignUp.lastname.$error.required && formSignUp.lastname.$touched">Last Name required!!</span><br>
+                <p>Email Address: <br><input type="text" placeholder="Email address" name="email" id="email" ng-model="signupCtrl.user.email" required></p>
+                <span class="errorsito" ng-if="formSignUp.email.$error.required && formSignUp.email.$touched">Email Address required!!</span><br>
+                <p>Phone Number: <br><input type="text" placeholder="Phone number" name="phone" id="phone" ng-model="signupCtrl.user.phone" required></p>
+                <span class="errorsito" ng-if="formSignUp.phone.$error.required && formSignUp.phone.$touched">Phone required!!</span><br>
+                <p>Favorite Dish: <br><input type="text" placeholder="Favorite dish" name="favDish" id="favDish" ng-model="signupCtrl.user.favMenu"></p><br>
+                <span class="errorsito" ng-if="!signupCtrl.hasFavDish && formSignUp.favDish.$touched">No such menu number exists</span>
+                <input type="submit" value="Sign-up" ng-click="signupCtrl.form(true)">
+                <input type="reset" value="Reset">
+                </center>
+        </fieldset>
+    </form>
+    <br><br>
+    <center>
+        <p ng-model="signupCtrl.completed"></p>
+        <div ng-if="signupCtrl.completed" class="col-md-5 col-centered alert alert-success alert-dismissible" role="alert">
+            Your information has been saved
+        </div>
+    </center>
+    <br><br>
+</div>
